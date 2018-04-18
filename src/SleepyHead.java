@@ -16,16 +16,23 @@ public class SleepyHead {
 		 */
 
 		int weekday = JOptionPane.showConfirmDialog(null, "Is it a weekday?", "", JOptionPane.YES_NO_OPTION);
-
+		if (weekday == 0) {
+			isWeekday = true;
+		} else {
+			isWeekday = false;
+		}
 		int vacation = JOptionPane.showConfirmDialog(null, "Are you on vacation?", "", JOptionPane.YES_NO_OPTION);
+		if (vacation == 0) {
+			isVacation = true;
+		} else {
+			isVacation = false;
+		}
 
-		if (weekday == 1 && vacation == 0) {
+		if (isVacation) {
 			JOptionPane.showMessageDialog(null, "Sleep in.");
-		} else if (weekday == 1 && vacation == 1) {
+		} else if (isWeekday) {
 			JOptionPane.showMessageDialog(null, "Get up lazybones!");
-		} else if (weekday == 0 && vacation == 1) {
-			JOptionPane.showMessageDialog(null, "Get up lazybones!");
-		} else if (weekday == 0 && vacation == 0) {
+		} else {
 			JOptionPane.showMessageDialog(null, "Sleep in.");
 		}
 		/*

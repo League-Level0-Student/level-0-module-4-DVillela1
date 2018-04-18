@@ -24,7 +24,7 @@ public class ChangeCalculator {
 		String quarters = JOptionPane.showInputDialog("How many quarters do you have?");
 		int q = Integer.parseInt(quarters);
 
-		double all = (0.25 * q) + (0.10 * d) + (0.05 * n);
+		float all = (float) ((0.25 * q) + (0.10 * d) + (0.05 * n));
 
 		JOptionPane.showMessageDialog(null, "You have $" + all + ".");
 		// Convert their answer to an int using Integer.parseInt()
