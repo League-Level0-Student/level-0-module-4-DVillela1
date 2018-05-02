@@ -7,6 +7,32 @@ import java.util.Scanner;
 public class PiAloud {
 	public static void main(String[] args) {
 
+		String pi = "3.1415926535";
+
+		int next = 4;
+
+		// System.out.println(pi.charAt(0));
+		// System.out.println(pi.charAt(2));
+		// System.out.println(pi.charAt(3));
+		// System.out.println(pi.charAt(4));
+
+		for (int i = 0; i < next; i++) {
+			speak(pi.charAt(i));
+		}
+
+		for (int i = next; i < pi.length(); i++) {
+
+			System.out.println("What is the next digit of pi?");
+
+			char abc = getInputFromUser();
+
+			if (abc == pi.charAt(i)) {
+				System.out.println("Correct!");
+			} else {
+				System.out.println("Incorrect! You have lost!");
+				break;
+			}
+		}
 		// 1. Make a main method and make sure your program can run
 
 		// 2. Make a String variable to hold the value of Pi. You could use
